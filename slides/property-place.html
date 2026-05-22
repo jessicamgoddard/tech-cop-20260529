@@ -1,0 +1,45 @@
+<section class="slide">
+    <h2>Property: <code>place-*</code></h2>
+    <p>Shorthand for <code>align-*</code> and <code>justify-*</code> — set both axes at once.</p>
+    <div class="code">
+        <textarea spellcheck="false">
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(2, 60px);
+    place-content: center;
+    /* place-content: space-between end; */
+    /* place-content: start; */
+    place-items: center;
+    /* place-items: stretch; */
+    /* place-items: start end; */
+    height: 220px;
+    background: #eee;
+}
+.item {
+    background: hotpink;
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.special {
+    place-self: end start;
+    /* place-self: center; */
+    background: rebeccapurple;
+}
+        </textarea>
+    </div>
+    <div class="demo">
+        <div class="grid">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item special">F</div>
+        </div>
+    </div>
+</section>

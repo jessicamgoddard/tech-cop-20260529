@@ -1,0 +1,23 @@
+<section class="slide">
+    <h2>Pseudo-class: <code>:not()</code></h2>
+    <p>Exclude elements from a selector — supports complex arguments.</p>
+    <div class="code">
+        <textarea spellcheck="false">
+li:not(:last-child) {
+    border-block-end: 1px solid #ccc;
+    padding-block-end: 0.5rem;
+    margin-block-end: 0.5rem;
+}
+/* li:not(.selected) { color: #999; } */
+/* :not(:is(h1, h2, h3)) { font-size: 1rem; } */
+        </textarea>
+    </div>
+    <div class="demo">
+        <ul>
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+            <li>Last item (no border)</li>
+        </ul>
+    </div>
+</section>

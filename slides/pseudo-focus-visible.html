@@ -1,0 +1,21 @@
+<section class="slide">
+    <h2>Pseudo-class: <code>:focus-visible</code></h2>
+    <p>Show focus styles only when keyboard-navigated, not on mouse click.</p>
+    <div class="code">
+        <textarea spellcheck="false">
+button, a {
+    outline: none;
+}
+button:focus-visible, a:focus-visible {
+    outline: 3px solid hotpink;
+    outline-offset: 3px;
+    /* :focus — would show on click too */
+}
+        </textarea>
+    </div>
+    <div class="demo">
+        <button>Click me (no ring) or Tab to me (ring)</button>
+        <br /><br />
+        <a href="#">Tab to me too</a>
+    </div>
+</section>

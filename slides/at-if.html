@@ -1,0 +1,19 @@
+<section class="slide">
+    <h2>Function: <code>if()</code></h2>
+    <p>Inline conditional values — choose a value based on a style query. (Chrome 137+, experimental)</p>
+    <div class="code">
+        <textarea spellcheck="false">
+.box {
+    --variant: primary;
+    /* change to: --variant: secondary; */
+    background: if(style(--variant: primary): hotpink; else: dodgerblue);
+    color: white;
+    padding: 1.5rem;
+    font-weight: bold;
+}
+        </textarea>
+    </div>
+    <div class="demo">
+        <div class="box">I respond to --variant</div>
+    </div>
+</section>

@@ -1,0 +1,26 @@
+<section class="slide">
+    <h2>Functions: <code>round()</code>, <code>abs()</code>, <code>sign()</code>, trig</h2>
+    <p>Newer math functions: step rounding, absolute values, sign extraction, and trig (<code>sin()</code>, <code>cos()</code>, <code>tan()</code>, …).</p>
+    <div class="code">
+        <textarea spellcheck="false">
+.rounded {
+    font-size: round(2.7rem, 0.5rem);
+    /* font-size: round(up, 2.7rem, 0.5rem); */
+    /* font-size: round(down, 2.7rem, 0.5rem); */
+}
+.bar {
+    --n: -80px;
+    width: abs(var(--n));
+    /* sign() returns -1, 0, or 1 — useful in calc() */
+    /* sin()/cos() enable circular layouts: */
+    /* translate: calc(100px * cos(45deg)) calc(100px * sin(45deg)) */
+    height: 40px;
+    background: hotpink;
+}
+        </textarea>
+    </div>
+    <div class="demo">
+        <p class="rounded">Rounded font size (2.7rem → nearest 0.5rem)</p>
+        <div class="bar"></div>
+    </div>
+</section>

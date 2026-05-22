@@ -1,9 +1,27 @@
+function splitSelectors(selector) {
+  const parts = [];
+  let depth = 0;
+  let current = '';
+  for (const char of selector) {
+    if (char === '(') depth++;
+    else if (char === ')') depth--;
+    else if (char === ',' && depth === 0) {
+      parts.push(current.trim());
+      current = '';
+      continue;
+    }
+    current += char;
+  }
+  if (current.trim()) parts.push(current.trim());
+  return parts;
+}
+
 function scopeCSS(raw, scope) {
-  return raw.replace(/([^{};,\s][^{},]*?)\s*\{/g, (_, selector) => {
-    const scoped = selector
-      .trim()
-      .split(',')
-      .map((s) => `${scope} ${s.trim()}`)
+  return raw.replace(/([^{};][^{}]*?)\s*\{/g, (_, selector) => {
+    const trimmed = selector.trim();
+    if (trimmed.startsWith('@')) return `${trimmed} {`;
+    const scoped = splitSelectors(trimmed)
+      .map((s) => `${scope} ${s}`)
       .join(', ');
     return `${scoped} {`;
   });

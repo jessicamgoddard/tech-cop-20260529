@@ -1,0 +1,27 @@
+<section class="slide">
+    <h2>Value: <code>display: flow-root</code></h2>
+    <p>Create a block formatting context — contains floats without clearfix hacks.</p>
+    <div class="code">
+        <textarea spellcheck="false">
+.container {
+    display: flow-root;
+    /* display: block; — swap to see container collapse */
+    background: lightblue;
+    padding: 0.5rem;
+}
+.float {
+    float: left;
+    width: 80px;
+    height: 80px;
+    background: hotpink;
+    margin-inline-end: 0.75rem;
+}
+        </textarea>
+    </div>
+    <div class="demo">
+        <div class="container">
+            <div class="float"></div>
+            <p>This text flows alongside the float.</p>
+        </div>
+    </div>
+</section>

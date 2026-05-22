@@ -1,0 +1,26 @@
+<section class="slide">
+    <h2>Function: <code>color-mix()</code></h2>
+    <p>Mix two colors in a chosen color space — the space changes the result.</p>
+    <div class="code">
+        <textarea spellcheck="false">
+.swatch {
+    width: 120px;
+    height: 80px;
+    display: inline-block;
+}
+.a {
+    background: color-mix(in srgb, hotpink 50%, dodgerblue);
+    /* background: color-mix(in srgb, hotpink 25%, dodgerblue); */
+}
+.b {
+    background: color-mix(in oklch, hotpink 50%, dodgerblue);
+    /* background: color-mix(in hsl, hotpink 50%, dodgerblue); */
+    /* background: color-mix(in lab, hotpink 50%, dodgerblue); */
+}
+        </textarea>
+    </div>
+    <div class="demo">
+        <div class="swatch a"></div>
+        <div class="swatch b"></div>
+    </div>
+</section>

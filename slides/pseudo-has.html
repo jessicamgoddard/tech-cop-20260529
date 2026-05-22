@@ -1,0 +1,28 @@
+<section class="slide">
+    <h2>Pseudo-class: <code>:has()</code></h2>
+    <p>Select elements based on their contents or following siblings.</p>
+    <div class="code">
+        <textarea spellcheck="false">
+.card {
+    padding: 1rem;
+    border: 2px solid #ccc;
+    margin-block-end: 0.5rem;
+}
+.card:has(img) {
+    border-color: hotpink;
+    background: #fff0f5;
+    /* .card:not(:has(img)) — cards WITHOUT an image */
+    /* .card:has(+ .card) — card followed by another card */
+}
+        </textarea>
+    </div>
+    <div class="demo">
+        <div class="card">
+            <img src="../assets/glasses.jpg" alt="Glasses" style="width: 80px; display: block; margin-block-end: 0.5rem;" />
+            <p>Card with image</p>
+        </div>
+        <div class="card">
+            <p>Card without image</p>
+        </div>
+    </div>
+</section>

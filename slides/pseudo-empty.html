@@ -1,0 +1,27 @@
+<section class="slide">
+    <h2>Pseudo-class: <code>:empty</code></h2>
+    <p>Match elements that have no children, including no text nodes.</p>
+    <div class="code">
+        <textarea spellcheck="false">
+.box {
+    min-height: 48px;
+    background: lightblue;
+    padding: 0.5rem;
+    margin-block-end: 0.5rem;
+}
+.box:empty {
+    background: #eee;
+    /* display: none; */
+}
+.box:empty::before {
+    content: '(empty)';
+    color: #999;
+}
+        </textarea>
+    </div>
+    <div class="demo">
+        <div class="box">Has content</div>
+        <div class="box"></div>
+        <div class="box">   </div>
+    </div>
+</section>

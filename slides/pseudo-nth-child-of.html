@@ -1,0 +1,25 @@
+<section class="slide">
+    <h2>Pseudo-class: <code>:nth-child(n of .selector)</code></h2>
+    <p>Target the nth element matching a selector — filter <code>:nth-child</code> by class.</p>
+    <div class="code">
+        <textarea spellcheck="false">
+li { padding: 0.25rem 0.5rem; }
+.highlight { background: lightyellow; }
+li:nth-child(2 of .highlight) {
+    background: hotpink;
+    color: white;
+    /* :nth-child(1 of .highlight) — first highlighted */
+    /* :nth-last-child(1 of .highlight) — last highlighted */
+}
+        </textarea>
+    </div>
+    <div class="demo">
+        <ul>
+            <li>Item 1</li>
+            <li class="highlight">Item 2 (highlight 1)</li>
+            <li class="highlight">Item 3 (highlight 2) ← targeted</li>
+            <li>Item 4</li>
+            <li class="highlight">Item 5 (highlight 3)</li>
+        </ul>
+    </div>
+</section>

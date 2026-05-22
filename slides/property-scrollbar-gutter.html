@@ -1,0 +1,27 @@
+<section class="slide">
+    <h2>Property: <code>scrollbar-gutter</code></h2>
+    <p>Reserve space for the scrollbar to prevent layout shift when it appears.</p>
+    <div class="code">
+        <textarea spellcheck="false">
+.box {
+    scrollbar-gutter: stable;
+    /* scrollbar-gutter: stable both-edges; */
+    /* scrollbar-gutter: auto; */
+    overflow: auto;
+    height: 100px;
+    border: 2px solid black;
+    width: 300px;
+}
+        </textarea>
+    </div>
+    <div class="demo">
+        <div class="box">
+            <p>Line one of content</p>
+            <p>Line two of content</p>
+            <p>Line three of content</p>
+            <p>Line four of content</p>
+            <p>Line five of content</p>
+            <p>Line six of content</p>
+        </div>
+    </div>
+</section>

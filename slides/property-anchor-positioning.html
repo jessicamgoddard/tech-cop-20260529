@@ -1,0 +1,37 @@
+<section class="slide">
+    <h2>Property: anchor positioning</h2>
+    <p>Position an element relative to another element anywhere in the DOM. (Chrome 125+ only)</p>
+    <div class="code">
+        <textarea spellcheck="false">
+.wrapper {
+    position: relative;
+    height: 120px;
+}
+.anchor {
+    anchor-name: --anchor;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    translate: -50% 0;
+}
+.popover {
+    position: absolute;
+    position-anchor: --anchor;
+    top: anchor(bottom);
+    left: anchor(left);
+    /* bottom: anchor(top); */
+    /* left: anchor(right); */
+    margin-block-start: 0.5rem;
+    background: hotpink;
+    color: white;
+    padding: 0.25rem 0.75rem;
+}
+        </textarea>
+    </div>
+    <div class="demo">
+        <div class="wrapper">
+            <button class="anchor">Anchor element</button>
+            <div class="popover">Anchored popover</div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,35 @@
+<section class="slide">
+    <h2>Pattern: <code>:has()</code> + <code>@container</code></h2>
+    <p>Combine <code>:has()</code> for content-based queries with <code>@container</code> for size-based queries.</p>
+    <div class="code">
+        <textarea spellcheck="false">
+.grid {
+    container-type: inline-size;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr));
+    gap: 0.75rem;
+}
+.card {
+    border: 2px solid #ccc;
+    padding: 1rem;
+}
+.card:has(img) {
+    border-color: hotpink;
+}
+@container (min-width: 400px) {
+    .card { display: flex; gap: 0.75rem; align-items: center; }
+}
+        </textarea>
+    </div>
+    <div class="demo">
+        <div class="grid">
+            <div class="card">
+                <img src="../assets/glasses.jpg" alt="Glasses" style="width: 60px; display: block;" />
+                <p>Card with image</p>
+            </div>
+            <div class="card">
+                <p>Card without image</p>
+            </div>
+        </div>
+    </div>
+</section>

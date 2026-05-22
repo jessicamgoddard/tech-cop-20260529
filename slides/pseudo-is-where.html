@@ -1,0 +1,26 @@
+<section class="slide">
+    <h2>Pseudo-class: <code>:is()</code> / <code>:where()</code></h2>
+    <p><code>:is()</code> takes the specificity of its most specific argument; <code>:where()</code> always has zero specificity.</p>
+    <div class="code">
+        <textarea spellcheck="false">
+:is(h2, h3) {
+    color: hotpink;
+    /* specificity = (0,0,1) — matches highest arg */
+}
+:where(p) {
+    color: dodgerblue;
+    /* specificity = (0,0,0) — always zero */
+}
+.override {
+    color: green;
+    /* overrides :where(p) because (0,1,0) > (0,0,0) */
+}
+        </textarea>
+    </div>
+    <div class="demo">
+        <h2>Styled with :is()</h2>
+        <h3>Also :is()</h3>
+        <p class="override">:where(p) blue, then overridden to green</p>
+        <p>Styled by :where(p)</p>
+    </div>
+</section>

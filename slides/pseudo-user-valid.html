@@ -1,0 +1,20 @@
+<section class="slide">
+    <h2>Pseudo-class: <code>:user-valid</code> / <code>:user-invalid</code></h2>
+    <p>Validate only after user interaction — avoids error styles on untouched fields.</p>
+    <div class="code">
+        <textarea spellcheck="false">
+input:user-invalid {
+    border: 2px solid crimson;
+    /* input:invalid — triggers immediately, before user touches it */
+}
+input:user-valid {
+    border: 2px solid green;
+}
+        </textarea>
+    </div>
+    <div class="demo">
+        <label>Email <input type="email" required placeholder="your@email.com" /></label>
+        <br /><br />
+        <label>Required <input type="text" required placeholder="Required field" /></label>
+    </div>
+</section>

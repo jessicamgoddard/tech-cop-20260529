@@ -1,0 +1,29 @@
+<section class="slide">
+    <h2>Property: <code>backdrop-filter</code></h2>
+    <p>Apply graphical effects to the area behind an element.</p>
+    <div class="code">
+        <textarea spellcheck="false">
+.container {
+    background-image: url('../assets/glasses.jpg');
+    background-size: cover;
+    width: 300px;
+    height: 200px;
+    position: relative;
+}
+.overlay {
+    backdrop-filter: blur(8px);
+    /* backdrop-filter: brightness(0.5); */
+    /* backdrop-filter: grayscale(1); */
+    /* backdrop-filter: blur(4px) brightness(0.8); */
+    position: absolute;
+    inset: 30px;
+    background: rgba(255, 255, 255, 0.2);
+}
+        </textarea>
+    </div>
+    <div class="demo">
+        <div class="container">
+            <div class="overlay"></div>
+        </div>
+    </div>
+</section>
