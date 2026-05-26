@@ -1,20 +1,30 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>Pseudo-class: <code>:user-valid</code> / <code>:user-invalid</code></h2>
-    <p>Validate only after user interaction — avoids error styles on untouched fields.</p>
-    <div class="code">
-        <textarea spellcheck="false">
-input:user-invalid {
-    border: 2px solid crimson;
-    /* input:invalid — triggers immediately, before user touches it */
-}
-input:user-valid {
-    border: 2px solid green;
-}
-        </textarea>
-    </div>
-    <div class="demo">
-        <label>Email <input type="email" required placeholder="your@email.com" /></label>
-        <br /><br />
-        <label>Required <input type="text" required placeholder="Required field" /></label>
-    </div>
+    <p>Validate only after user interaction; avoids error styles on untouched fields.</p>
+    <p>Unlike <code>:invalid</code>, they don't fire on page load, so fields don't show red borders before anyone has typed anything.</p>
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
+/* Every invalid input field */
+/* input:invalid {
+  border: 2px solid red;
+} */
+
+/* Every invalid input field AFTER interaction */
+/* input:user-invalid {
+  border: 2px solid hotpink;
+} */
+
+/* Every valid input field AFTER interaction */
+/* input:user-valid {
+  border: 2px solid mediumturquoise;
+} */
+    </textarea>
+  </div>
+  <div class="demo">
+    <label>Email* <input type="email" required placeholder="your@email.com" style="color-scheme: light; font-size: 1.25rem;" /></label>
+    <br /><br />
+    <label>Required* <input type="text" required placeholder="Required field" style="color-scheme: light; font-size: 1.25rem;" /></label>
+  </div>
 </section>

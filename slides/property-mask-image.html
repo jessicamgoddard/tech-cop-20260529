@@ -1,17 +1,27 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>Property: <code>mask-image</code></h2>
     <p>Mask an element using a gradient or image.</p>
-    <div class="code">
-        <textarea spellcheck="false">
+    <p>Black areas are fully visible; transparent areas reveal the background beneath. Creates smooth fade effects without image editing.</p>
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
 img {
-    -webkit-mask-image: linear-gradient(to bottom, black, transparent);
-    mask-image: linear-gradient(to bottom, black, transparent);
-    /* mask-image: radial-gradient(circle, black 40%, transparent 70%); */
-    width: 300px;
+  /* mask-image: linear-gradient(to bottom, black, transparent); */
+  /* mask-image: radial-gradient(circle, black 40%, transparent 70%); */
+  /* mask-image: url(#star-mask); (SVG shape mask) */
+  inline-size: 100%;
 }
-        </textarea>
-    </div>
-    <div class="demo">
-        <img src="../assets/purple-record.jpg" alt="Purple record" />
-    </div>
+    </textarea>
+  </div>
+  <div class="demo">
+    <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+      <defs>
+        <mask id="star-mask" maskContentUnits="objectBoundingBox">
+          <polygon fill="white" points="0.5,0.05 0.61,0.35 0.95,0.35 0.68,0.57 0.79,0.91 0.5,0.70 0.21,0.91 0.32,0.57 0.05,0.35 0.39,0.35"/>
+        </mask>
+      </defs>
+    </svg>
+    <img src="../assets/purple-record.jpg" alt="Purple record" />
+  </div>
 </section>

@@ -1,19 +1,22 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>Units: viewport units</h2>
-    <p>Modern viewport units: dynamic (<code>dvh</code>), small (<code>svh</code>), large (<code>lvh</code>), and logical (<code>vi</code>, <code>vb</code>). On mobile, <code>dvh</code> updates as browser UI shows/hides; <code>svh</code> is always the smallest viewport; <code>lvh</code> always the largest.</p>
-    <div class="code">
-        <textarea spellcheck="false">
+    <p>Size elements relative to the viewport, with variants that adapt to mobile browser chrome.</p>
+    <p>On mobile, browser UI (address bar, tab strip) shows and hides as you scroll, changing the visible area. <code>dvh</code> tracks that dynamic size; <code>svh</code> is always the smallest possible viewport; <code>lvh</code> always the largest. Logical variants <code>vi</code> and <code>vb</code> map to inline and block axes, respecting writing mode.</p>
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
 .box {
-    width: 50vi;
-    /* width: 50vb; */
-    /* width: 50vw; */
-    /* writing-mode: vertical-rl; */
-    height: 80px;
-    background: lightblue;
+  background: mediumturquoise;
+  height: 80px;
+  width: 50vi;
+  /* width: 50vb; */
+  /* width: 50vw; */
+  /* writing-mode: vertical-rl; */
 }
-        </textarea>
-    </div>
-    <div class="demo">
-        <div class="box"></div>
-    </div>
+    </textarea>
+  </div>
+  <div class="demo">
+    <div class="box"></div>
+  </div>
 </section>

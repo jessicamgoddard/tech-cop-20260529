@@ -1,25 +1,42 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>Pseudo-class: <code>:nth-child(n of .selector)</code></h2>
-    <p>Target the nth element matching a selector — filter <code>:nth-child</code> by class.</p>
-    <div class="code">
-        <textarea spellcheck="false">
-li { padding: 0.25rem 0.5rem; }
-.highlight { background: lightyellow; }
-li:nth-child(2 of .highlight) {
-    background: hotpink;
-    color: white;
-    /* :nth-child(1 of .highlight) — first highlighted */
-    /* :nth-last-child(1 of .highlight) — last highlighted */
+    <p>Target the nth element matching a selector, basically filtering <code>:nth-child</code> by class.</p>
+    <p>The old <code>:nth-child(2)</code> counted every sibling regardless of type or class, making it nearly useless in real world scenarios.</p>
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
+/* Every list item */
+li {
+  padding: 0.25rem 0.5rem;
 }
-        </textarea>
-    </div>
-    <div class="demo">
-        <ul>
-            <li>Item 1</li>
-            <li class="highlight">Item 2 (highlight 1)</li>
-            <li class="highlight">Item 3 (highlight 2) ← targeted</li>
-            <li>Item 4</li>
-            <li class="highlight">Item 5 (highlight 3)</li>
-        </ul>
-    </div>
+
+/* Every list item with the class "highlight" */
+/* .highlight {
+  background: lightyellow;
+}
+*/
+
+/* 2nd list item with the class "highlight" */
+/* li:nth-child(2 of .highlight) {
+  background: hotpink;
+  color: white;
+} */
+
+/* 1st list item with the class "highlight" counting from the end */
+/* li:nth-last-child(1 of .highlight) {
+  background: lightblue;
+  color: black;
+} */
+    </textarea>
+  </div>
+  <div class="demo">
+    <ul>
+      <li>Item 1</li>
+      <li class="highlight">Item 2 (highlight class)</li>
+      <li class="highlight">Item 3 (highlight class)</li>
+      <li>Item 4</li>
+      <li class="highlight">Item 5 (highlight class)</li>
+    </ul>
+  </div>
 </section>

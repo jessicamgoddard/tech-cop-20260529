@@ -1,21 +1,25 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>Property: logical spacing</h2>
     <p>Use flow-relative margin, padding, and border shorthands.</p>
-    <div class="code">
-        <textarea spellcheck="false">
+    <p><code>inline</code> and <code>block</code> are applied to <code>margin</code> and <code>padding</code>. Physical directions stay fixed; logical ones adapt.</p>
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
+
 .box {
-    margin-inline: auto;
-    padding-block: 1.5rem;
-    padding-inline: 1rem;
-    border-inline-start: 4px solid hotpink;
-    /* direction: rtl; */
-    /* writing-mode: vertical-rl; */
-    max-inline-size: 300px;
-    background: lightyellow;
+  background: lightyellow;
+  /* border-inline-start: 4px solid hotpink; */
+  /* direction: rtl; */
+  /* writing-mode: vertical-rl; */
+  /* margin-inline: auto; */
+  /* max-inline-size: 300px; */
+  /* padding-block: 1.5rem; */
+  /* padding-inline: 1rem; */
 }
-        </textarea>
-    </div>
-    <div class="demo">
-        <div class="box">Flow-relative spacing adapts to writing direction.</div>
-    </div>
+    </textarea>
+  </div>
+  <div class="demo">
+    <div class="box">Flow-relative spacing adapts to writing direction.</div>
+  </div>
 </section>

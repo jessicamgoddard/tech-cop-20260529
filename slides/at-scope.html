@@ -1,29 +1,32 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>At-rule: <code>@scope</code></h2>
     <p>Scope styles to a subtree without high-specificity selectors. CSS Modules uses <code>:global</code>/<code>:local</code> for the same concept.</p>
-    <div class="code">
-        <textarea spellcheck="false">
-@scope (.card) {
-    h3 { color: hotpink; margin: 0 0 0.25rem; }
-    p  { font-size: 0.875rem; color: navy; margin: 0; }
-    /* styles cannot escape .card */
-}
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
 .card {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    margin-block-end: 0.5rem;
+  border: 1px solid silver;
+  margin-block-end: 0.5rem;
+  padding: 1rem;
 }
-        </textarea>
+
+/* Styles inside @scope only apply to elements inside .card. */
+@scope (.card) {
+  h3 { color: hotpink; margin: 0 0 0.25rem; }
+  p  { color: darkslateblue; font-size: 0.875rem; margin: 0; }
+}
+    </textarea>
+  </div>
+  <div class="demo">
+    <div class="card">
+      <h3>Inside card</h3>
+      <p>This paragraph is darkslateblue.</p>
     </div>
-    <div class="demo">
-        <div class="card">
-            <h3>Inside card</h3>
-            <p>This paragraph is navy.</p>
-        </div>
-        <div class="card">
-            <h3>Also inside card</h3>
-            <p>Also navy.</p>
-        </div>
-        <p>Outside the card — not styled by @scope.</p>
+    <div class="card">
+      <h3>Also inside card</h3>
+      <p>Also darkslateblue.</p>
     </div>
+    <p>Outside the card, not styled by @scope.</p>
+  </div>
 </section>

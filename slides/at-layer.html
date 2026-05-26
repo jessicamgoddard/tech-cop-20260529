@@ -1,21 +1,23 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>At-rule: <code>@layer</code></h2>
     <p>Define cascade layers to control specificity independent of source order.</p>
-    <div class="code">
-        <textarea spellcheck="false">
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
 @layer base, components, utilities;
 
 @layer base {
-    p { color: navy; font-size: 1rem; }
+  p { color: darkslateblue; font-size: 1rem; }
 }
 @layer utilities {
-    p { color: hotpink; }
-    /* utilities wins over base regardless of order */
+  p { color: hotpink; }
+  /* utilities wins over base regardless of order */
 }
-/* p { color: green; } — unlayered styles always beat layers */
-        </textarea>
-    </div>
-    <div class="demo">
-        <p>Styled by cascade layers</p>
-    </div>
+/* p { color: mediumturquoise; } (unlayered styles always beat layers) */
+    </textarea>
+  </div>
+  <div class="demo">
+    <p>Styled by cascade layers</p>
+  </div>
 </section>

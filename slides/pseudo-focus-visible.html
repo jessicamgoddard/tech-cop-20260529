@@ -1,21 +1,29 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>Pseudo-class: <code>:focus-visible</code></h2>
     <p>Show focus styles only when keyboard-navigated, not on mouse click.</p>
-    <div class="code">
-        <textarea spellcheck="false">
-button, a {
-    outline: none;
-}
-button:focus-visible, a:focus-visible {
-    outline: 3px solid hotpink;
-    outline-offset: 3px;
-    /* :focus — would show on click too */
-}
-        </textarea>
-    </div>
-    <div class="demo">
-        <button>Click me (no ring) or Tab to me (ring)</button>
-        <br /><br />
-        <a href="#">Tab to me too</a>
-    </div>
+    <p>Now the recommended way to style focus indicators, replacing <code>outline: none</code> hacks that remove visibility for keyboard users entirely.</p>
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
+/* Show focus styles on all focused elements */
+/* a:focus,
+button:focus {
+  outline-offset: 3px;
+  outline: 3px solid lightgray;
+} */
+
+/* Show custom focus styles only when keyboard-navigated */
+/* a:focus-visible,
+button:focus-visible {
+  outline-offset: 3px;
+  outline: 3px solid hotpink;
+} */
+    </textarea>
+  </div>
+  <div class="demo">
+    <button style="cursor: pointer; padding: 0.5rem;">This is a button</button>
+    <br /><br />
+    <a href="#">This is a link</a>
+  </div>
 </section>

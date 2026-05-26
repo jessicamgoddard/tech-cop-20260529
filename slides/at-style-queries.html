@@ -1,31 +1,33 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>At-rule: style queries</h2>
     <p>Query a container's custom property values, not just its size.</p>
-    <div class="code">
-        <textarea spellcheck="false">
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
 .container {
-    container-type: inline-size;
+  container-type: inline-size;
 }
 .container.primary   { --variant: primary; }
 .container.secondary { --variant: secondary; }
 .card {
-    padding: 1rem;
-    background: #eee;
+  background: whitesmoke;
+  padding: 1rem;
 }
 @container style(--variant: primary) {
-    .card { background: hotpink; color: white; }
+  .card { background: hotpink; color: white; }
 }
 @container style(--variant: secondary) {
-    .card { background: dodgerblue; color: white; }
+  .card { background: mediumpurple; color: white; }
 }
-        </textarea>
+    </textarea>
+  </div>
+  <div class="demo">
+    <div class="container primary" style="margin-block-end: 0.5rem;">
+      <div class="card">Primary variant</div>
     </div>
-    <div class="demo">
-        <div class="container primary" style="margin-block-end: 0.5rem;">
-            <div class="card">Primary variant</div>
-        </div>
-        <div class="container secondary">
-            <div class="card">Secondary variant</div>
-        </div>
+    <div class="container secondary">
+      <div class="card">Secondary variant</div>
     </div>
+  </div>
 </section>

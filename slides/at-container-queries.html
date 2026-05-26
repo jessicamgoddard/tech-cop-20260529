@@ -1,33 +1,40 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>At-rule: <code>@container</code></h2>
-    <p>Apply styles based on the container's size, not the viewport. Drag the container to resize.</p>
-    <div class="code">
-        <textarea spellcheck="false">
+    <p>Apply styles based on the container's size, not the viewport.</p>
+    <p>Mark a parent with <code>container-type: inline-size</code>, then write <code>@container () {}</code> rules that respond to that parent's available width.</p>
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
+/* Identify the container */
 .container {
-    container-type: inline-size;
-    /* container-name: card-wrapper; */
-    resize: horizontal;
-    overflow: hidden;
-    width: 400px;
-    border: 2px dashed #ccc;
-    padding: 0.5rem;
+  border: 2px dashed silver;
+  container-type: inline-size;
+  /* container-name: card-wrapper; */
+  overflow: hidden;
+  padding: 0.5rem;
+  resize: horizontal;
+  width: 400px;
 }
+
 .card {
-    background: lightblue;
-    padding: 1rem;
-    font-size: clamp(0.875rem, 5cqi, 1.5rem);
+  background: mediumturquoise;
+  font-size: clamp(0.875rem, 5cqi, 1.5rem);
+  padding: 1rem;
 }
-@container (min-width: 300px) {
-    .card {
-        background: hotpink;
-        color: white;
-    }
-}
-        </textarea>
+
+/* Apply styles when the container is at least 300px wide */
+/* @container (min-width: 300px) {
+  .card {
+    background: hotpink;
+    color: white;
+  }
+} */
+    </textarea>
+  </div>
+  <div class="demo">
+    <div class="container">
+      <div class="card">Card adapts to its container</div>
     </div>
-    <div class="demo">
-        <div class="container">
-            <div class="card">Card adapts to its container</div>
-        </div>
-    </div>
+  </div>
 </section>

@@ -1,27 +1,32 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>Value: <code>display: flow-root</code></h2>
-    <p>Create a block formatting context — contains floats without clearfix hacks.</p>
-    <div class="code">
-        <textarea spellcheck="false">
+    <p>Create a block formatting context; contains floats without clearfix hacks.</p>
+    <p>Fully contains its children, including floated elements. The explicit, readable replacement for clearfix: one property, no side effects, says exactly what it does.</p>
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
 .container {
-    display: flow-root;
-    /* display: block; — swap to see container collapse */
-    background: lightblue;
-    padding: 0.5rem;
+  background: mediumturquoise;
+  display: block;
+  /* Use flow-root to contain the float without clearfix hacks. */
+  /* display: flow-root; */
+  padding: 0.5rem;
 }
+
 .float {
-    float: left;
-    width: 80px;
-    height: 80px;
-    background: hotpink;
-    margin-inline-end: 0.75rem;
+  background: hotpink;
+  /* float: left; */
+  height: 100px;
+  margin-inline-end: 0.75rem;
+  width: 100px;
 }
-        </textarea>
+    </textarea>
+  </div>
+  <div class="demo">
+    <div class="container">
+      <div class="float"></div>
+      <p>This text flows alongside the float.</p>
     </div>
-    <div class="demo">
-        <div class="container">
-            <div class="float"></div>
-            <p>This text flows alongside the float.</p>
-        </div>
-    </div>
+  </div>
 </section>

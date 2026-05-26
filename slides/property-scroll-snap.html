@@ -1,39 +1,42 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>Property: scroll snap</h2>
     <p>Snap scroll positions to specific elements in a scrollable container.</p>
-    <div class="code">
-        <textarea spellcheck="false">
+    <p>Two properties do the work: <code>scroll-snap-type</code> on the container sets the axis and strictness, <code>scroll-snap-align</code> on each item sets where it snaps.</p>
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
 .scroller {
-    scroll-snap-type: y mandatory;
-    /* scroll-snap-type: y proximity; */
-    scroll-padding-top: 0px;
-    /* scroll-behavior: smooth; */
-    overflow-y: scroll;
-    height: 200px;
-    border: 2px solid black;
+  border: 2px solid black;
+  height: 200px;
+  overflow-y: scroll;
+  scroll-padding-top: 0px;
+  /* scroll-behavior: smooth; */
+  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y proximity; */
 }
 .item {
-    scroll-snap-align: start;
-    /* scroll-snap-align: center; */
-    /* scroll-snap-align: end; */
-    scroll-margin-top: 0px;
-    height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    font-weight: bold;
+  align-items: center;
+  display: flex;
+  font-size: 3rem;
+  font-weight: bold;
+  height: 180px;
+  justify-content: center;
+  scroll-margin-top: 0px;
+  scroll-snap-align: start;
+  /* scroll-snap-align: center; */
+  /* scroll-snap-align: end; */
 }
-.item:nth-child(1) { background: lightblue; }
-.item:nth-child(2) { background: lightgreen; }
+.item:nth-child(1) { background: mediumturquoise; }
+.item:nth-child(2) { background: mediumturquoise; }
 .item:nth-child(3) { background: lightyellow; }
-        </textarea>
+    </textarea>
+  </div>
+  <div class="demo">
+    <div class="scroller">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
     </div>
-    <div class="demo">
-        <div class="scroller">
-            <div class="item">1</div>
-            <div class="item">2</div>
-            <div class="item">3</div>
-        </div>
-    </div>
+  </div>
 </section>

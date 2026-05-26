@@ -1,20 +1,22 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>Property: <code>font-size-adjust</code></h2>
     <p>Normalize the apparent size of text across different fonts by matching x-height.</p>
-    <div class="code">
-        <textarea spellcheck="false">
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
 p {
-    font-size: 24px;
-    font-size-adjust: 0.5;
-    /* font-size-adjust: none; */
-    /* font-size-adjust: from-font; */
+  font-size-adjust: 0.5;
+  /* font-size-adjust: none; */
+  /* font-size-adjust: from-font; */
+  font-size: 24px;
 }
 .verdana { font-family: Verdana, sans-serif; }
 .times   { font-family: 'Times New Roman', serif; }
-        </textarea>
-    </div>
-    <div class="demo">
-        <p class="verdana">The quick brown fox jumps</p>
-        <p class="times">The quick brown fox jumps</p>
-    </div>
+    </textarea>
+  </div>
+  <div class="demo">
+    <p class="verdana">The quick brown fox jumps</p>
+    <p class="times">The quick brown fox jumps</p>
+  </div>
 </section>

@@ -1,23 +1,35 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>Pseudo-class: <code>:not()</code></h2>
-    <p>Exclude elements from a selector — supports complex arguments.</p>
-    <div class="code">
-        <textarea spellcheck="false">
-li:not(:last-child) {
-    border-block-end: 1px solid #ccc;
-    padding-block-end: 0.5rem;
-    margin-block-end: 0.5rem;
-}
-/* li:not(.selected) { color: #999; } */
-/* :not(:is(h1, h2, h3)) { font-size: 1rem; } */
-        </textarea>
-    </div>
-    <div class="demo">
-        <ul>
-            <li>First item</li>
-            <li>Second item</li>
-            <li>Third item</li>
-            <li>Last item (no border)</li>
-        </ul>
-    </div>
+    <p>Exclude elements from a selector.</p>
+    <p>Modern <code>:not()</code> accepts selector lists; the old single-argument version could not. Replaces the pattern of styling the common case then overriding for exceptions.</p>
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
+/* Every list item that does NOT have the class "first" */
+/* li:not(.first) {
+  color: darkgray;
+} */
+
+/* Every list item that is does NOT have the class "first" OR "second" */
+/* li:not(.first, .second) {
+  font-weight: bold;
+} */
+
+/* Every list item that is NOT the last child of its parent */
+/* li:not(:last-child) {
+  border-block-end: 1px solid silver;
+  margin-block-end: 0.5rem;
+  padding-block-end: 0.5rem;
+} */
+    </textarea>
+  </div>
+  <div class="demo">
+    <ul>
+      <li class="first">First item</li>
+      <li class="second">Second item</li>
+      <li class="third">Third item</li>
+      <li class="last">Last item</li>
+    </ul>
+  </div>
 </section>

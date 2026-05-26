@@ -1,20 +1,32 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>Property: <code>text-*</code></h2>
-    <p>Dress up text decorations.</p>
-    <div class="code">
-        <textarea spellcheck="false">
+    <p>Style underlines, overlines, and line-throughs with custom color, thickness, and offset.</p>
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
 p {
-    /* text-decoration: line, thickness, style, and color */
-    text-decoration: underline 1px solid currentColor;
-    /* text-decoration-line: overline; */
-    /* text-decoration-thickness: 2px; */
-    /* text-decoration-style: wavy; */
-    /* text-decoration-color: red; */
-    /* text-underline-offset: 4px; */
+  /* text-decoration: line, thickness, style, and color */
+  text-decoration: underline 1px solid currentColor;
+
+  /* none, underline, overline, line-through */
+  /* text-decoration-line: overline; */
+
+  /* auto, from-font, or a specific length */
+  /* text-decoration-thickness: 2px; */
+
+  /* solid, double, wavy, dotted, dashed */
+  /* text-decoration-style: wavy; */
+
+  /* currentColor or any valid color value */
+  /* text-decoration-color: hotpink; */
+
+  /* auto or a specific length */
+  /* text-underline-offset: 4px; */
 }
-        </textarea>
-    </div>
-    <div class="demo">
-        <p>This is a text decoration example.</p>
-    </div>
+    </textarea>
+  </div>
+  <div class="demo">
+    <p>This is a text decoration example.</p>
+  </div>
 </section>

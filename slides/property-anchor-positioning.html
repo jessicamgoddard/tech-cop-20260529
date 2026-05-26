@@ -1,37 +1,39 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>Property: anchor positioning</h2>
     <p>Position an element relative to another element anywhere in the DOM. (Chrome 125+ only)</p>
-    <div class="code">
-        <textarea spellcheck="false">
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
 .wrapper {
-    position: relative;
-    height: 120px;
+  height: 120px;
+  position: relative;
 }
 .anchor {
-    anchor-name: --anchor;
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    translate: -50% 0;
+  anchor-name: --anchor;
+  left: 50%;
+  position: absolute;
+  top: 20px;
+  translate: -50% 0;
 }
 .popover {
-    position: absolute;
-    position-anchor: --anchor;
-    top: anchor(bottom);
-    left: anchor(left);
-    /* bottom: anchor(top); */
-    /* left: anchor(right); */
-    margin-block-start: 0.5rem;
-    background: hotpink;
-    color: white;
-    padding: 0.25rem 0.75rem;
+  background: hotpink;
+  color: white;
+  left: anchor(left);
+  /* bottom: anchor(top); */
+  /* left: anchor(right); */
+  margin-block-start: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  position-anchor: --anchor;
+  position: absolute;
+  top: anchor(bottom);
 }
-        </textarea>
+    </textarea>
+  </div>
+  <div class="demo">
+    <div class="wrapper">
+      <button class="anchor">Anchor element</button>
+      <div class="popover">Anchored popover</div>
     </div>
-    <div class="demo">
-        <div class="wrapper">
-            <button class="anchor">Anchor element</button>
-            <div class="popover">Anchored popover</div>
-        </div>
-    </div>
+  </div>
 </section>

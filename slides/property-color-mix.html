@@ -1,26 +1,33 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>Function: <code>color-mix()</code></h2>
-    <p>Mix two colors in a chosen color space — the space changes the result.</p>
-    <div class="code">
-        <textarea spellcheck="false">
+    <p>Mix two colors in a chosen color space; the space changes the result.</p>
+    <p>sRGB blending often goes muddy in the middle; OkLCH stays perceptually vivid throughout the blend.</p>
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
 .swatch {
-    width: 120px;
-    height: 80px;
-    display: inline-block;
+  display: inline-block;
+  block-size: 200px;
+  inline-size: 100%;
 }
+
 .a {
-    background: color-mix(in srgb, hotpink 50%, dodgerblue);
-    /* background: color-mix(in srgb, hotpink 25%, dodgerblue); */
+  background: mediumpurple;
+  /* background: color-mix(in srgb, hotpink 50%, mediumpurple); */
+  /* background: color-mix(in srgb, hotpink 25%, mediumpurple); */
 }
+
 .b {
-    background: color-mix(in oklch, hotpink 50%, dodgerblue);
-    /* background: color-mix(in hsl, hotpink 50%, dodgerblue); */
-    /* background: color-mix(in lab, hotpink 50%, dodgerblue); */
+  background: mediumpurple;
+  /* background: color-mix(in oklch, hotpink 50%, mediumpurple); */
+  /* background: color-mix(in hsl, hotpink 50%, mediumpurple); */
+  /* background: color-mix(in lab, hotpink 50%, mediumpurple); */
 }
-        </textarea>
-    </div>
-    <div class="demo">
-        <div class="swatch a"></div>
-        <div class="swatch b"></div>
-    </div>
+    </textarea>
+  </div>
+  <div class="demo">
+    <div class="swatch a"></div>
+    <div class="swatch b"></div>
+  </div>
 </section>

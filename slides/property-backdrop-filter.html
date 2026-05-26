@@ -1,29 +1,38 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>Property: <code>backdrop-filter</code></h2>
     <p>Apply graphical effects to the area behind an element.</p>
-    <div class="code">
-        <textarea spellcheck="false">
+    <p>The element needs a semi-transparent background to reveal the effect; a fully opaque element just covers it.</p>
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
 .container {
-    background-image: url('../assets/glasses.jpg');
-    background-size: cover;
-    width: 300px;
-    height: 200px;
-    position: relative;
+  aspect-ratio: 4 / 3;
+  background-image: url('../assets/glasses.jpg');
+  background-size: cover;
+  inline-size: 100%;
+  position: relative;
 }
+
 .overlay {
-    backdrop-filter: blur(8px);
-    /* backdrop-filter: brightness(0.5); */
-    /* backdrop-filter: grayscale(1); */
-    /* backdrop-filter: blur(4px) brightness(0.8); */
-    position: absolute;
-    inset: 30px;
-    background: rgba(255, 255, 255, 0.2);
+  /* backdrop-filter: blur(8px); */
+  /* backdrop-filter: brightness(0.5); */
+  /* backdrop-filter: contrast(150%); */
+  /* backdrop-filter: grayscale(1); */
+  /* backdrop-filter: hue-rotate(90deg); */
+  /* backdrop-filter: invert(); */
+  /* backdrop-filter: sepia(100%); */
+  /* backdrop-filter: saturate(80%); */
+  /* backdrop-filter: blur(4px) brightness(0.8); */
+  background: rgba(255, 255, 255, 0.2);
+  inset: 30px;
+  position: absolute;
 }
-        </textarea>
+    </textarea>
+  </div>
+  <div class="demo">
+    <div class="container">
+      <div class="overlay"></div>
     </div>
-    <div class="demo">
-        <div class="container">
-            <div class="overlay"></div>
-        </div>
-    </div>
+  </div>
 </section>

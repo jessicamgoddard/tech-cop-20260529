@@ -1,27 +1,30 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>Property: <code>scrollbar-gutter</code></h2>
     <p>Reserve space for the scrollbar to prevent layout shift when it appears.</p>
-    <div class="code">
-        <textarea spellcheck="false">
+    <p>Most impactful on Windows, where scrollbars take up physical space and the shift is visible.</p>
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
 .box {
-    scrollbar-gutter: stable;
-    /* scrollbar-gutter: stable both-edges; */
-    /* scrollbar-gutter: auto; */
-    overflow: auto;
-    height: 100px;
-    border: 2px solid black;
-    width: 300px;
+  border: 2px solid black;
+  height: 100px;
+  overflow: auto;
+  scrollbar-gutter: stable;
+  /* scrollbar-gutter: stable both-edges; */
+  /* scrollbar-gutter: auto; */
+  width: 300px;
 }
-        </textarea>
+    </textarea>
+  </div>
+  <div class="demo">
+    <div class="box">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Cras lacus tortor, porta at erat et, pulvinar ornare justo.</p>
+      <p>Nulla vel ipsum vel sapien tempor tristique.</p>
+      <p>Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec.</p>
+      <p>Donec viverra eleifend lacus, vitae ullamcorper metus.</p>
+      <p>Morbi a bibendum metus.</p>
     </div>
-    <div class="demo">
-        <div class="box">
-            <p>Line one of content</p>
-            <p>Line two of content</p>
-            <p>Line three of content</p>
-            <p>Line four of content</p>
-            <p>Line five of content</p>
-            <p>Line six of content</p>
-        </div>
-    </div>
+  </div>
 </section>

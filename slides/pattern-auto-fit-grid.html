@@ -1,29 +1,31 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>Pattern: responsive grid, no media queries</h2>
-    <p>Items wrap and fill automatically — <code>min()</code> prevents overflow on narrow containers.</p>
-    <div class="code">
-        <textarea spellcheck="false">
+    <p>Items wrap and fill automatically; <code>min()</code> prevents overflow on narrow containers.</p>
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(10rem, 100%), 1fr));
-    /* swap auto-fit → auto-fill to keep empty tracks */
-    gap: 0.75rem;
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(10rem, 100%), 1fr));
+  /* swap auto-fit → auto-fill to keep empty tracks */
 }
 .item {
-    background: hotpink;
-    color: white;
-    padding: 1rem;
+  background: hotpink;
+  color: white;
+  padding: 1rem;
 }
-        </textarea>
+    </textarea>
+  </div>
+  <div class="demo">
+    <div class="grid">
+      <div class="item">One</div>
+      <div class="item">Two</div>
+      <div class="item">Three</div>
+      <div class="item">Four</div>
+      <div class="item">Five</div>
+      <div class="item">Six</div>
     </div>
-    <div class="demo">
-        <div class="grid">
-            <div class="item">One</div>
-            <div class="item">Two</div>
-            <div class="item">Three</div>
-            <div class="item">Four</div>
-            <div class="item">Five</div>
-            <div class="item">Six</div>
-        </div>
-    </div>
+  </div>
 </section>

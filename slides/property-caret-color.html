@@ -1,16 +1,20 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>Property: <code>caret-color</code></h2>
     <p>Change the color of the text cursor in inputs and textareas.</p>
-    <div class="code">
-        <textarea spellcheck="false">
+    <p>A small finishing touch for on-brand form fields. Can also be set to <code>transparent</code> to hide the cursor entirely.</p>
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
 input {
-    caret-color: hotpink;
-    /* caret-color: auto; */
-    /* caret-color: transparent; */
+  caret-color: auto;
+  /* caret-color: hotpink; */
+  /* caret-color: transparent; */
+  font-size: 2rem;
 }
-        </textarea>
-    </div>
-    <div class="demo">
-        <input type="text" value="Click to focus me" />
-    </div>
+    </textarea>
+  </div>
+  <div class="demo">
+    <input type="text" value="Click to focus me" />
+  </div>
 </section>

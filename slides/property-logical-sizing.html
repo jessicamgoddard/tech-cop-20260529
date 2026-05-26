@@ -1,20 +1,40 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>Property: logical sizing</h2>
     <p>Use flow-relative sizing instead of <code>width</code> and <code>height</code>.</p>
-    <div class="code">
-        <textarea spellcheck="false">
+    <p>In horizontal writing, <code>inline-size</code> = width and <code>block-size</code> = height. In vertical writing mode, the roles swap automatically; layouts adapt without extra overrides.</p>
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
 .box {
-    inline-size: 200px;
-    block-size: 100px;
-    /* min-inline-size: 100px; */
-    /* max-block-size: 80px; */
-    /* writing-mode: vertical-rl; */
-    background: lightblue;
-    padding: 1rem;
+  background: mediumturquoise;
+  padding: 1rem;
 }
-        </textarea>
-    </div>
-    <div class="demo">
-        <div class="box">Some text inside the box</div>
-    </div>
+
+/* Sets height when writing-mode is horizontal, width when vertical. */
+/* .box {
+  block-size: 300px;
+} */
+
+/* Sets width when writing-mode is horizontal, height when vertical. */
+/* .box {
+  inline-size: 200px;
+} */
+
+/* Min/max versions also exist. */
+/* .box {
+  max-block-size: 80px;
+  min-inline-size: 100px;
+} */
+
+/* Logical properties adapt to writing mode automatically.
+With writing-mode: vertical-rl, block-size sets width and inline-size sets height. */
+/* .box {
+  writing-mode: vertical-rl;
+} */
+    </textarea>
+  </div>
+  <div class="demo">
+    <div class="box">Some text inside the box</div>
+  </div>
 </section>

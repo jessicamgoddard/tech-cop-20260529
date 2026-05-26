@@ -1,27 +1,28 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>Pseudo-class: <code>:empty</code></h2>
     <p>Match elements that have no children, including no text nodes.</p>
-    <div class="code">
-        <textarea spellcheck="false">
+    <p>Lets CSS react to empty containers from the server or API without any JavaScript.</p>
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
+/* Every element with the class "box" */
 .box {
-    min-height: 48px;
-    background: lightblue;
-    padding: 0.5rem;
-    margin-block-end: 0.5rem;
+  border: 1px solid mediumturquoise;
+  margin-block-end: 0.5rem;
+  min-height: 48px;
+  padding: 0.5rem;
 }
-.box:empty {
-    background: #eee;
-    /* display: none; */
-}
-.box:empty::before {
-    content: '(empty)';
-    color: #999;
-}
-        </textarea>
-    </div>
-    <div class="demo">
-        <div class="box">Has content</div>
-        <div class="box"></div>
-        <div class="box">   </div>
-    </div>
+
+/* Every element with the class "box" that has no children */
+/* .box:empty {
+  background: silver;
+} */
+    </textarea>
+  </div>
+  <div class="demo">
+    <div class="box">Has content</div>
+    <div class="box"></div>
+    <div class="box">   </div>
+  </div>
 </section>

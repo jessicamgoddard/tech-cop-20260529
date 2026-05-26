@@ -1,18 +1,19 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>Property: <code>aspect-ratio</code></h2>
-    <p>Specify an aspect ratio instead of setting explicit width and height values.</p>
-    <div class="code">
-        <textarea spellcheck="false">
+    <p>Maintains a width-to-height ratio as the element scales, without explicit width and height values. No math, no hacks.</p>
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
 img {
-aspect-ratio: 1;
-aspect-ratio: 16 / 9;
-
-/* -------------------------------- */
-width: 500px;
+  /* aspect-ratio: 1; */
+  /* aspect-ratio: 16 / 9; */
+  inline-size: 300px;
+  /* object-fit: cover; */
 }
-        </textarea>
-    </div>
-    <div class="demo">
-        <img src="../assets/purple-tree.jpg" alt="Purple tree" />
-    </div>
+    </textarea>
+  </div>
+  <div class="demo">
+    <img src="../assets/purple-tree.jpg" alt="Purple tree" />
+  </div>
 </section>

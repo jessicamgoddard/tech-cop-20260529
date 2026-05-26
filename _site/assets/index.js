@@ -17,14 +17,44 @@ function splitSelectors(selector) {
 }
 
 function scopeCSS(raw, scope) {
-  return raw.replace(/([^{};][^{}]*?)\s*\{/g, (_, selector) => {
-    const trimmed = selector.trim();
-    if (trimmed.startsWith('@')) return `${trimmed} {`;
-    const scoped = splitSelectors(trimmed)
-      .map((s) => `${scope} ${s}`)
-      .join(', ');
-    return `${scoped} {`;
-  });
+  let result = '';
+  let i = 0;
+
+  while (i < raw.length) {
+    const braceIdx = raw.indexOf('{', i);
+    if (braceIdx === -1) {
+      result += raw.slice(i);
+      break;
+    }
+
+    const header = raw.slice(i, braceIdx).trim();
+
+    let depth = 1;
+    let j = braceIdx + 1;
+    while (j < raw.length && depth > 0) {
+      if (raw[j] === '{') depth++;
+      else if (raw[j] === '}') depth--;
+      j++;
+    }
+
+    const inner = raw.slice(braceIdx + 1, j - 1);
+
+    const cleanHeader = header.replace(/\/\*[\s\S]*?\*\//g, '').trim();
+
+    if (!cleanHeader) {
+      result += `{${inner}}`;
+    } else if (cleanHeader.startsWith('@')) {
+      const scopedInner = /^@keyframes/.test(cleanHeader) ? inner : scopeCSS(inner, scope);
+      result += `${cleanHeader} {${scopedInner}}`;
+    } else {
+      const scoped = splitSelectors(cleanHeader).map((s) => `${scope} ${s}`).join(', ');
+      result += `${scoped} {${inner}}`;
+    }
+
+    i = j;
+  }
+
+  return result;
 }
 
 function initSlide(slide, index) {

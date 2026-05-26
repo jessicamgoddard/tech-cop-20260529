@@ -1,28 +1,47 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>Pseudo-class: <code>:has()</code></h2>
     <p>Select elements based on their contents or following siblings.</p>
-    <div class="code">
-        <textarea spellcheck="false">
+    <p>Avoids toggling classes in JavaScript or adding template conditionals just to reflect content state in CSS.</p>
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
+/* Every card */
 .card {
-    padding: 1rem;
-    border: 2px solid #ccc;
-    margin-block-end: 0.5rem;
+  border: 2px solid silver;
+  margin-block-end: 0.5rem;
+  padding: 1rem;
 }
-.card:has(img) {
-    border-color: hotpink;
-    background: #fff0f5;
-    /* .card:not(:has(img)) — cards WITHOUT an image */
-    /* .card:has(+ .card) — card followed by another card */
-}
-        </textarea>
+
+/* Cards that contain an image */
+/* .card:has(img) {
+  background: lavenderblush;
+  border-color: hotpink;
+} */
+
+/* Cards that do not contain an image */
+/* .card:not(:has(img)) {
+  background: aliceblue;
+  border-color: lightskyblue;
+} */
+
+/* Cards that are immediately followed by another card */
+/* .card:has(+ .card) {
+  background: honeydew;
+  border-color: limegreen;
+} */
+    </textarea>
+  </div>
+  <div class="demo">
+    <div class="card">
+      <img src="../assets/glasses.jpg" alt="Glasses" style="width: 300px; display: block; margin-block-end: 0.5rem;" />
+      <p>Card with image</p>
     </div>
-    <div class="demo">
-        <div class="card">
-            <img src="../assets/glasses.jpg" alt="Glasses" style="width: 80px; display: block; margin-block-end: 0.5rem;" />
-            <p>Card with image</p>
-        </div>
-        <div class="card">
-            <p>Card without image</p>
-        </div>
+    <div class="card">
+      <p>Card without image</p>
     </div>
+    <div class="card">
+      <p>Card without image</p>
+    </div>
+  </div>
 </section>

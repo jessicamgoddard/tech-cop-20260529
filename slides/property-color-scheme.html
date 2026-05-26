@@ -1,29 +1,31 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>Property: <code>color-scheme</code></h2>
     <p>Tell the browser which color schemes an element supports.</p>
-    <div class="code">
-        <textarea spellcheck="false">
+    <p>Without it, native controls like inputs, checkboxes, and scrollbars render in light mode even inside a fully dark-themed UI.</p>
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
 div {
-    color-scheme: dark;
-    /* color-scheme: light; */
-    /* color-scheme: light dark; */
-    padding: 1rem;
+  color-scheme: light;
+  /* color-scheme: dark; */
+  padding: 1rem;
 }
-        </textarea>
+    </textarea>
+  </div>
+  <div class="demo">
+    <div>
+      <label>Name <input type="text" placeholder="Your name" style="font-size: 1.5rem;" /></label>
+      <br /><br />
+      <label>
+        <select style="font-size: 1.5rem;">
+          <option>Option A</option>
+          <option>Option B</option>
+          <option>Option C</option>
+        </select>
+      </label>
+      <br /><br />
+      <label><input type="checkbox" style="font-size: 1.5rem;" /> Check me</label>
     </div>
-    <div class="demo">
-        <div>
-            <label>Name <input type="text" placeholder="Your name" /></label>
-            <br /><br />
-            <label>
-                <select>
-                    <option>Option A</option>
-                    <option>Option B</option>
-                    <option>Option C</option>
-                </select>
-            </label>
-            <br /><br />
-            <label><input type="checkbox" /> Check me</label>
-        </div>
-    </div>
+  </div>
 </section>

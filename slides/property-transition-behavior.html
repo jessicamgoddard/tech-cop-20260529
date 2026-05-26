@@ -1,26 +1,30 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>Property: <code>transition-behavior: allow-discrete</code></h2>
-    <p>Transition discrete properties like <code>display</code> — previously impossible without JS.</p>
-    <div class="code">
-        <textarea spellcheck="false">
+    <p>Transition discrete properties like <code>display</code>; previously impossible without JS.</p>
+    <p>Normally, toggling display instantly removes the element; <code>allow-discrete</code> keeps it visible long enough for the exit transition to finish, then hides it.</p>
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
 .box {
-    transition: display 0.4s allow-discrete, opacity 0.4s;
-    /* transition-behavior: allow-discrete; — longhand form */
-    /* @starting-style enables the enter animation */
-    opacity: 1;
-    padding: 1rem;
-    background: hotpink;
-    color: white;
-    margin-block-start: 0.5rem;
+  background: hotpink;
+  color: white;
+  margin-block-start: 0.5rem;
+  opacity: 1;
+  padding: 1rem;
+  transition: display 0.4s, opacity 0.4s;
+  /* transition-behavior: allow-discrete; */
 }
+
 input:not(:checked) ~ .box {
-    display: none;
-    opacity: 0;
+  display: none;
+  opacity: 0;
 }
-        </textarea>
-    </div>
-    <div class="demo">
-        <label><input type="checkbox" checked /> Toggle box</label>
-        <div class="box">I fade out on hide</div>
-    </div>
+    </textarea>
+  </div>
+  <div class="demo">
+    <input type="checkbox" id="toggle-box" checked />
+    <label for="toggle-box">Toggle box</label>
+    <div class="box">I fade out on hide</div>
+  </div>
 </section>

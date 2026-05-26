@@ -1,18 +1,20 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>Pattern: center a shrink-wrapped element</h2>
-    <p>Center an element without a hardcoded width using <code>fit-content</code> + <code>margin-inline: auto</code>.</p>
-    <div class="code">
-        <textarea spellcheck="false">
+    <p><code>width: fit-content</code> combined with <code>margin-inline: auto</code> centers a block element that sizes to its content, no hardcoded width, no extra wrapper elements needed.</p>
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
 .box {
-    width: fit-content;
-    margin-inline: auto;
-    /* old way: width: 200px; margin: 0 auto; */
-    background: lightblue;
-    padding: 1rem;
+  background: mediumturquoise;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 200px;
+  /* width: fit-content; */
 }
-        </textarea>
-    </div>
-    <div class="demo">
-        <div class="box">Centered to content width</div>
-    </div>
+    </textarea>
+  </div>
+  <div class="demo">
+    <div class="box">Centered to content width</div>
+  </div>
 </section>

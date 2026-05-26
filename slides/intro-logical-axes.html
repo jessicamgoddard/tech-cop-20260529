@@ -1,0 +1,65 @@
+<section class="slide">
+  <style>
+  .logical-diagram {
+    align-items: center;
+    display: grid;
+    gap: 0.5rem 1rem;
+    grid-template-columns: max-content 1fr max-content;
+    grid-template-rows: max-content auto max-content;
+    justify-items: center;
+    margin: 1.5rem auto;
+  }
+  .ld-box {
+    border: 2px dashed mediumpurple;
+    color: #a89cc8;
+    font-size: 1.5rem;
+    padding: 1.5rem 2.5rem;
+    text-align: center;
+    width: 100%;
+  }
+  .ld-label {
+    align-items: center;
+    display: flex;
+    font-family: monospace;
+    font-size: 1.5rem;
+    font-weight: 600;
+    gap: 0.25rem;
+    white-space: nowrap;
+  }
+  .ld-block { color: hotpink; flex-direction: column; }
+  .ld-inline { color: mediumturquoise; }
+  .ld-arrow { font-size: 1.1rem; line-height: 1; }
+  </style>
+
+  <div class="slide-header">
+    <h2>Concept: logical directions</h2>
+    <p>Logical properties use <strong>block</strong>, <strong>inline</strong>, <strong>start</strong>, and <strong>end</strong> instead of top/right/bottom/left, so layouts adapt to any writing direction automatically.</p>
+    <p class="slide-note">In horizontal left-to-right writing: <strong>block</strong> = vertical axis, <strong>inline</strong> = horizontal axis. With <code>writing-mode: vertical-rl</code>, the axes swap; logical properties follow automatically.</p>
+  </div>
+
+  <div class="logical-diagram" aria-label="Diagram showing block and inline axes around a box element">
+    <div></div>
+    <div class="ld-label ld-block">
+      <code>block-start</code>
+      <span class="ld-arrow">↓</span>
+    </div>
+    <div></div>
+
+    <div class="ld-label ld-inline">
+      <span class="ld-arrow">→</span>
+      <code>inline-start</code>
+    </div>
+    <div class="ld-box">element</div>
+    <div class="ld-label ld-inline">
+      <code>inline-end</code>
+      <span class="ld-arrow">←</span>
+    </div>
+
+    <div></div>
+    <div class="ld-label ld-block">
+      <span class="ld-arrow">↑</span>
+      <code>block-end</code>
+    </div>
+    <div></div>
+  </div>
+</section>

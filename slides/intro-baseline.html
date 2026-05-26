@@ -1,19 +1,22 @@
-<section class="slide" style="padding: 2rem; display: flex; flex-direction: column; justify-content: center;">
+<section class="slide">
+  <div class="slide-header">
     <h2>What is Baseline?</h2>
-    <p>A signal from browser vendors and MDN indicating whether a feature is safe to use across all major browsers (Chrome, Edge, Firefox, Safari).</p>
-    <div style="display: flex; flex-direction: column; gap: 1.25rem; margin-block: 2rem;">
-        <div style="display: flex; align-items: flex-start; gap: 1rem;">
-            <span style="background: #1b6b3a; color: white; padding: 0.25rem 0.75rem; border-radius: 4px; white-space: nowrap; font-size: 0.85rem; font-weight: bold;">✓ Widely available</span>
-            <p style="margin: 0;">In all major browsers for <strong>30+ months</strong>. Safe for any project.</p>
-        </div>
-        <div style="display: flex; align-items: flex-start; gap: 1rem;">
-            <span style="background: #005a9c; color: white; padding: 0.25rem 0.75rem; border-radius: 4px; white-space: nowrap; font-size: 0.85rem; font-weight: bold;">✓ Newly available</span>
-            <p style="margin: 0;">Just landed in all major browsers. Usable today, but consider your support window.</p>
-        </div>
-        <div style="display: flex; align-items: flex-start; gap: 1rem;">
-            <span style="background: #92400e; color: white; padding: 0.25rem 0.75rem; border-radius: 4px; white-space: nowrap; font-size: 0.85rem; font-weight: bold;">⚠ Limited availability</span>
-            <p style="margin: 0;">Not yet supported in all major browsers. Use with caution or a fallback.</p>
-        </div>
+    <p>An indicator of whether a feature is safe to use across all major browsers (Chrome, Edge, Firefox, Safari).</p>
+    <p class="slide-note"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">MDN</a> marks every CSS property page with its current Baseline status. <a href="https://caniuse.com/">CanIUse.com</a> is also a great resource.</p>
+    <p class="slide-note">All slides in this deck include Baseline features, either Newly or Widely Available.</p>
+  </div>
+  <div class="badge-list">
+    <div class="badge-row">
+      <span class="badge badge--wide">✓ Widely available</span>
+      <p>In all major browsers for <strong>30+ months</strong>. Safe for any project.</p>
     </div>
-    <p style="color: #555; font-size: 0.9rem;">MDN marks every CSS property page with its current Baseline status. All slides in this deck are Baseline — either Newly or Widely Available.</p>
+    <div class="badge-row">
+      <span class="badge badge--new">✓ Newly available</span>
+      <p>Just landed in all major browsers. Usable today, but consider your support window.</p>
+    </div>
+    <div class="badge-row">
+      <span class="badge badge--limited">⚠ Limited availability</span>
+      <p>Not yet supported in all major browsers. Use with caution or a fallback.</p>
+    </div>
+  </div>
 </section>

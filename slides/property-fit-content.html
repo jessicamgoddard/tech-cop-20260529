@@ -1,21 +1,23 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>Value: <code>fit-content</code></h2>
     <p>Size an element to its content, with optional max constraint.</p>
-    <div class="code">
-        <textarea spellcheck="false">
+    <p>Unlike <code>display: inline-block</code>, it stays in normal flow, so <code>margin-inline: auto</code> still works to center it.</p>
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
 .box {
-    width: fit-content;
-    /* width: min-content; */
-    /* width: max-content; */
-    /* width: fit-content(250px); */
-    background: lightblue;
-    padding: 0.5rem;
-    margin-block-end: 0.5rem;
+  background: mediumturquoise;
+  margin-block-end: 0.5rem;
+  padding: 1rem;
+  /* width: fit-content; */
+  /* width: min-content; */
+  /* width: max-content; */
 }
-        </textarea>
-    </div>
-    <div class="demo">
-        <div class="box">Short text</div>
-        <div class="box">This is a much longer piece of text that shows how sizing keywords behave differently</div>
-    </div>
+    </textarea>
+  </div>
+  <div class="demo">
+    <div class="box">Short text</div>
+    <div class="box">This is a much longer piece of text that shows how sizing keywords behave differently</div>
+  </div>
 </section>

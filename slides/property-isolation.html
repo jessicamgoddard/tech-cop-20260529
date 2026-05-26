@@ -1,26 +1,28 @@
 <section class="slide">
+  <div class="slide-header">
     <h2>Property: <code>isolation</code></h2>
     <p>Create a new stacking context to contain blend modes.</p>
-    <div class="code">
-        <textarea spellcheck="false">
+  </div>
+  <div class="code">
+    <textarea spellcheck="false">
 .wrapper {
-    isolation: isolate;
-    /* isolation: auto; */
-    background: gold;
-    padding: 1rem;
-    display: inline-block;
+  background: lightyellow;
+  display: inline-block;
+  isolation: isolate;
+  /* isolation: auto; */
+  padding: 1rem;
 }
 .blend {
-    width: 100px;
-    height: 100px;
-    background: hotpink;
-    mix-blend-mode: multiply;
+  background: hotpink;
+  height: 100px;
+  mix-blend-mode: multiply;
+  width: 100px;
 }
-        </textarea>
+    </textarea>
+  </div>
+  <div class="demo">
+    <div class="wrapper">
+      <div class="blend"></div>
     </div>
-    <div class="demo">
-        <div class="wrapper">
-            <div class="blend"></div>
-        </div>
-    </div>
+  </div>
 </section>
