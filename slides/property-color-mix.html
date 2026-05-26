@@ -1,33 +1,27 @@
 <section class="slide">
   <div class="slide-header">
     <h2>Function: <code>color-mix()</code></h2>
-    <p>Mix two colors in a chosen color space; the space changes the result.</p>
-    <p>sRGB blending often goes muddy in the middle; OkLCH stays perceptually vivid throughout the blend.</p>
+    <p>Mix two or more colors.</p>
+    <p>Mixing with <code>transparent</code> reduces a color's opacity without applying <code>opacity</code> to the element — text, borders, and child elements are unaffected.</p>
   </div>
   <div class="code">
     <textarea spellcheck="false">
-.swatch {
-  display: inline-block;
-  block-size: 200px;
-  inline-size: 100%;
+button {
+  background-color: hotpink;
+  border: 2px solid hotpink;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
 }
 
-.a {
-  background: mediumpurple;
-  /* background: color-mix(in srgb, hotpink 50%, mediumpurple); */
-  /* background: color-mix(in srgb, hotpink 25%, mediumpurple); */
-}
-
-.b {
-  background: mediumpurple;
-  /* background: color-mix(in oklch, hotpink 50%, mediumpurple); */
-  /* background: color-mix(in hsl, hotpink 50%, mediumpurple); */
-  /* background: color-mix(in lab, hotpink 50%, mediumpurple); */
+button:hover {
+  /* background-color: color-mix(in srgb, hotpink 50%, transparent); */
+  opacity: 0.5;
 }
     </textarea>
   </div>
   <div class="demo">
-    <div class="swatch a"></div>
-    <div class="swatch b"></div>
+    <button>Some text here</button>
   </div>
 </section>

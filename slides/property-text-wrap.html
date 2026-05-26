@@ -1,15 +1,14 @@
 <section class="slide">
   <div class="slide-header">
     <h2>Property: <code>text-wrap</code></h2>
-    <p>Control how text wraps: balance line lengths or avoid orphans.</p>
-    <p>Designed for headings and pull quotes: anywhere you'd otherwise tweak <code>max-width</code> until the line breaks look right.</p>
+    <p>Control how text wraps.</p>
   </div>
   <div class="code">
     <textarea spellcheck="false">
 h2 {
   max-width: 280px;
+  text-wrap: wrap;
   /* text-wrap: nowrap; */
-  /* text-wrap: wrap; */
   /* text-wrap: balance; */
 }
     </textarea>

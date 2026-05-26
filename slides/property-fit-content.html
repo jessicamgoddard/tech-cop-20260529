@@ -1,14 +1,15 @@
 <section class="slide">
   <div class="slide-header">
     <h2>Value: <code>fit-content</code></h2>
-    <p>Size an element to its content, with optional max constraint.</p>
-    <p>Unlike <code>display: inline-block</code>, it stays in normal flow, so <code>margin-inline: auto</code> still works to center it.</p>
+    <p>Size an element to its content.</p>
+    <p><code>fit-content</code> shrinks to content width; <code>min-content</code> shrinks to the narrowest word; <code>max-content</code> expands as wide as the content allows, ignoring the container.</p>
   </div>
   <div class="code">
     <textarea spellcheck="false">
 .box {
   background: teal;
   margin-block-end: 0.5rem;
+  /* margin-inline: auto; */
   padding: 1rem;
   /* width: fit-content; */
   /* width: min-content; */

@@ -2,7 +2,7 @@
   <div class="slide-header">
     <h2>Pseudo-class: <code>:nth-child(n of .selector)</code></h2>
     <p>Target the nth element matching a selector, basically filtering <code>:nth-child</code> by class.</p>
-    <p>The old <code>:nth-child(2)</code> counted every sibling regardless of type or class, making it nearly useless in real world scenarios.</p>
+    <p>The old <code>:nth-child()</code> counted every sibling regardless of type or class, making it unreliable for mixed-content lists.</p>
   </div>
   <div class="code">
     <textarea spellcheck="false">
@@ -20,13 +20,11 @@ li {
 /* 2nd list item with the class "highlight" */
 /* li:nth-child(2 of .highlight) {
   background: hotpink;
-  color: white;
 } */
 
 /* 1st list item with the class "highlight" counting from the end */
 /* li:nth-last-child(1 of .highlight) {
   background: teal;
-  color: white;
 } */
     </textarea>
   </div>
