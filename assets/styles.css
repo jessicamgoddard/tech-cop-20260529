@@ -86,7 +86,7 @@
   }
 
   .slide > .slide-header > p {
-    margin: 0.25rem 0 0.5rem;
+    margin: 1rem 0 1rem;
     color: #a89cc8;
     font-size: 1.05rem;
     line-height: 1.6;
@@ -141,11 +141,11 @@
     }
 
     .demo {
-      background: #ffffff;
-      color: #111827;
+      background: #1a1730;
+      color: #ede9ff;
       border-radius: 12px;
-      padding: 1.5rem;
-      border: 1px solid color-mix(in srgb, #FF69B3 20%, transparent);
+      padding: 3rem 1.5rem 1.5rem;
+      border: 1px solid color-mix(in srgb, #FF69B3 35%, transparent);
       font-size: 1.25rem;
       overflow: auto;
       position: relative;
@@ -159,7 +159,7 @@
       font-size: 0.6rem;
       font-weight: 700;
       letter-spacing: 0.15em;
-      color: color-mix(in srgb, #FF69B3 35%, transparent);
+      color: color-mix(in srgb, #FF69B3 55%, transparent);
       pointer-events: none;
     }
 

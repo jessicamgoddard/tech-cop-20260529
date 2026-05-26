@@ -24,3 +24,12 @@ This is an interactive CSS property demo tool — a scrollable "deck" of slides,
 **Live editing (`assets/index.js`):** On load, `initSlide` replaces each textarea with a CodeMirror instance and creates a `<style>` tag in `<head>`. The `scopeCSS` function rewrites every CSS selector to be prefixed with `.slide[data-slide="N"] .demo`, scoping edits to that slide's demo only. Changes update the style tag on every editor change event.
 
 **Adding a new slide:** Create `slides/property-name.html` following the existing pattern, then add `{% include "property-name.html" %}` inside the `.deck` in `src/index.html`.
+
+## Deployment
+
+Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the site and deploys it to GitHub Pages automatically.
+
+## Other files
+
+- `README.md` — project overview for new contributors
+- `NOTES.md` — presenter script with talking points for each slide; not general documentation
